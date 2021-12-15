@@ -1,0 +1,74 @@
+задание 1
+
+import time
+
+a = []
+for i in range(1000000):
+    a.append(i)
+start_time = time.time()
+for j in range(len[a]):
+    if j = 999999:
+        print(time.time() - start_time)
+
+
+задание 2
+
+import time
+
+a = []
+for i in range(1000000):
+    a.append(i)
+start_time = time.time()
+left = -1 
+right = len(a) 
+while right > left + 1: 
+    middle = (left + right) // 2 
+    if a[middle] > 999999: 
+        right = middle 
+    else: 
+        left = middle 
+print(time.time() - start_time)
+
+
+задание 3
+
+import time
+
+def bsearch(a, f, n, key):
+    if (n < f):
+        return None
+    else:
+        m = f + ((n - f) // 2)
+        if a[m] > key:
+            return bsearch(a, f, m - 1, key)
+        elif a[m] < key:
+            return bsearch(a, m + 1, n, key)
+        else:
+            return m
+
+
+a = []
+for i in range(1000000):
+    a.append(i)
+start_time = time.time()
+print(bsearch(a, 0, 999999, 999999))
+print(time.time() - start_time)
+
+Измерения времени:
+Линейный поиск.
+1 = 2.1457672119140625e-06
+100 = 9.5367431640625e-06
+1000 = 6.222724914550781e-05
+1000000 = 0.10651421546936035
+
+Бинарный поиск через цикл:
+1 = 2.574920654296875e-05
+100 = 2.9325485229492188e-05
+1000 = 4.9114227294921875e-05
+1000000 = 7.677078247070312e-05
+
+Бинарный поиск через рекурсию:
+1 = 2.1219253540039062e-05
+100 = 3.552436828613281e-05
+1000 = 4.291534423828125e-05
+1000000 = 8.869171142578125e-05
